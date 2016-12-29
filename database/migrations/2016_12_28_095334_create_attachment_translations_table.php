@@ -13,7 +13,15 @@ class CreateAttachmentTranslationsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('attachment_translations', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('attachment_id')->unsigned();
+            $table->string('locale',5);
+            $table->string('description',500);
+            $table->unique(['attachment_id','locale']);
+            $table->foreign('attachment_id')->references('id')->on('attachments')->onDelete('cascade');
+            //
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class CreateAttachmentTranslationsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('attachment_translations');
     }
 }

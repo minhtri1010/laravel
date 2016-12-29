@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNavigationsTable extends Migration
+class CreateArticlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateNavigationsTable extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('navigations', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('key',250)->unique()->index();
-            $table->integer('priority');
+            $table->string('key',50);
+            $table->integer('priority',50);
             $table->boolean('is_publish');
             $table->string('created_by',50);
-            $table->string('updated_by',50)->nullable();
-            $table->string('deleted_by',50)->nullable();
+            $table->string('updated_by',50);
+            $table->string('deleted_by',50);
             $table->timestamps();
             $table->softDeletes();
             //
@@ -35,6 +34,7 @@ class CreateNavigationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('navigations');
+        Schema::drop('articles');
+        //
     }
 }

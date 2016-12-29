@@ -13,7 +13,20 @@ class CreateArticleTranstionsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('article_translations', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('article_id')->unsigned();
+            $table->string('locale',5);
+            $table->string('name',250);
+            $table->string('summary',500);
+            $table->text('content');
+            $table->string('meta_description',500);
+            $table->string('meta_keywods',500);
+
+            $table->unique(['article_id','locale']);
+            $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
+            //
+        });
     }
 
     /**
@@ -23,6 +36,6 @@ class CreateArticleTranstionsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('article_translations');
     }
 }

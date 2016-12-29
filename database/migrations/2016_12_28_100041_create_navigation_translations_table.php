@@ -13,7 +13,17 @@ class CreateNavigationTranslationsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('navigation_translations', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('navigation_id')->unsigned();
+            $table->string('locale',5);
+            $table->string('name',250);
+            $table->string('summary',500);
+            $table->text('content');
+            $table->string('link',250);
+            $table->unique(['navigation_id','locale']);
+            $table->foreign('navigation_id')->references('id')->on('navigations')->onDelete('cascade');
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class CreateNavigationTranslationsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('navigation_translations');
     }
 }

@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->date('DoB');
             $table->enum('is_publish', ['yes','no']);
-            $table->integer('group_id');
+            $table->integer('user_group_id');
             $table->timestamps();
         });
     }

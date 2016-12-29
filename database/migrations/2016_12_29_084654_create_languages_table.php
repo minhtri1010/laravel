@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserGroupTable extends Migration
+class CreateLanguagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateUserGroupTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_group', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('key');
-            $table->string('value',50);
+        Schema::create('languages', function (Blueprint $table) {
+            $table->string('code',5)->primary();
+            $table->string('name',50);
+            $table->integer('priority');
+            $table->boolean('is_default');
+            $table->boolean('is_key_language');
             //
         });
+        //
     }
 
     /**
@@ -28,6 +31,6 @@ class CreateUserGroupTable extends Migration
      */
     public function down()
     {
-        Schema::drop('user_group');
+        Scheme::drop('languages')
     }
 }

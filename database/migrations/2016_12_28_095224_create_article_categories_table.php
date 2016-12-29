@@ -13,7 +13,19 @@ class CreateArticleCategoriesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('article_categories', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('key',250)->unique()->index();
+            $table->integer('parent_id')->nullable();
+            $table->integer('priority');
+            $table->boolean('is_publish');
+            $table->string('created_by',50);
+            $table->string('updated_by',50)->nullable();
+            $table->string('deleted_by',50)->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+            //
+        });
     }
 
     /**
@@ -23,6 +35,6 @@ class CreateArticleCategoriesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('article_categories');
     }
 }

@@ -14,6 +14,13 @@ class CreateConfigsTable extends Migration
     public function up()
     {
         //
+        Schema::create('configs', function (Blueprint $table){
+            $table->increments('id');
+            $table->string('key', 250)->unique()->index();
+            $table->string('type',250);
+            $table->string('text',250);
+            $table->string('value', 250);
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class CreateConfigsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('configs');
     }
 }
