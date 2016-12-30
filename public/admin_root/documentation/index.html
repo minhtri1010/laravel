@@ -1,0 +1,1100 @@
+<!DOCTYPE html> 
+<html lang ="en">
+<head> 
+
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> Supina - The Ultimate Admin/Frontend Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicons -->
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets-minified/images/icons/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets-minified/images/icons/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets-minified/images/icons/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets-minified/images/icons/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets-minified/images/icons/favicon.png">
+
+
+
+    <!-- JS Core -->
+
+    <script type="text/javascript" src="../assets-minified/js-core.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(window).load(function(){
+            setTimeout(function() {
+                $('#loading').fadeOut( 400, "linear" );
+            }, 300);
+        });
+    </script>
+    <style>
+        #loading {position: fixed;width: 100%;height: 100%;left: 0;top: 0;right: 0;bottom: 0;display: block;background: #fff;z-index: 10000;}
+        #loading img {position: absolute;top: 50%;left: 50%;margin: -23px 0 0 -23px;}
+    </style>
+
+
+
+    <!-- HELPERS -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/helpers/helpers-all.css">
+
+<!-- ELEMENTS -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/elements/elements-all.css">
+
+<!-- Icons -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/icons/fontawesome/fontawesome.css">
+<link rel="stylesheet" type="text/css" href="../assets-minified/icons/linecons/linecons.css">
+
+<!-- SNIPPETS -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/snippets/snippets-all.css">
+
+<!-- APPLICATIONS -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/applications/mailbox.css">
+
+
+
+    <!-- HG sticky -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/sticky/sticky.js"></script>
+
+    <!-- Highlight -->
+
+    <link class="remove-production" rel="stylesheet" type="text/css" href="../assets-minified/widgets/prism/prism.css">
+    <script class="remove-production" type="text/javascript" src="../assets-minified/widgets/prism/prism.js"></script>
+    <script class="remove-production" type="text/javascript">
+        $(document).ready(function() {
+
+            $('.language-markup').each(function(i){
+                $(this).text($(this).html());
+            });
+
+            $('.source-btn').click(function(){
+                $(this).parent().parent().find('.example-html').addClass('show-source');
+                $('body').append('<div id="example-overlay" class="ui-widget-overlay bg-black opacity-60"></div>');
+                $('.example-close-modal').show();
+            });
+
+            $('.example-close-modal').click(function(){
+                $('#example-overlay').remove();
+                $('.example-html').removeClass('show-source');
+                $('.example-close-modal').hide();
+            });
+
+        });
+
+    </script>
+
+    <!-- Demo -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/demo.css">
+
+    <!-- FRONTEND ELEMENTS -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/frontend-elements/frontend-elements-all.css">
+
+    <!-- Admin Theme -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/themes/supina/layout.css">
+    <link id="layout-color" rel="stylesheet" type="text/css" href="../assets-minified/themes/supina/default/layout-color.css">
+    <link id="framework-color" rel="stylesheet" type="text/css" href="../assets-minified/themes/supina/default/framework-color.css">
+    <link rel="stylesheet" type="text/css" href="../assets-minified/themes/supina/border-radius.css">
+
+    <script type="text/javascript" src="../assets-minified/themes/supina/js/layout.js"></script>
+    <script type="text/javascript" src="../assets-minified/widgets/wow/wow.js"></script>
+    <!-- Frontend Theme -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/themes/supina/frontend/color.css">
+    <script type="text/javascript" src="../assets-minified/themes/supina/frontend/js/frontend-init.js"></script>
+
+    <!-- Color Helpers CSS -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/helpers/colors.css">
+    <style>
+    .remove-docs {
+        display: none;
+    }
+    </style>
+
+</head> 
+<body class="docs-layout">
+    <div id="loading" class="ui-front hide loader ui-widget-overlay bg-white opacity-100"><img src="../assets-minified/images/spinner/loader-dark.gif" alt=""></div>
+    <div class="row" style="margin: 0;">
+        <div class="col-md-3">
+
+            <div id="docs-nav">
+
+	<div class="content-box mrg25T">
+	    <h3 class="content-box-header bg-default">
+	            Admin templates
+			<div class="header-buttons-separator">
+			    <a href="#" class="icon-separator toggle-button">
+			        <i class="glyph-icon icon-chevron-up"></i>
+			    </a>
+			</div>
+	    </h3>
+	    <div class="content-box-wrapper">
+			<select name="" class="chosen-select">
+				<option>Select...</option>
+				
+				<option value="applications.html">Applications</option>
+				
+				<option value="admin-layouts.html">Layout pages</option>
+				
+				<option value="admin-navigation.html">Navigation menus</option>
+				
+				<option value="breadcrumbs.html">Breadcrumb</option>
+				
+				<option value="dashboard.html">Dashboards</option>
+				
+				<option value="lockscreen-page.html">Lockscreen pages</option>
+				
+				<option value="login-page.html">Login pages</option>
+				
+				<option value="server-page.html">Server response</option>
+				
+				<option value="animations.html">Animations</option>
+				
+				<option value="chat.html">Chat</option>
+				
+				<option value="getting-started.html">Getting started</option>
+				
+				<option value="helper-classes.html">Helper classes</option>
+				
+				<option value="page-transitions.html">Page transitions</option>
+				
+				<option value="slidebars.html">Slidebars</option>
+				
+				<option value="snippets.html">Snippets</option>
+				
+				<option value="todo.html">Checklist</option>
+				
+			</select>
+	    </div>
+	</div>
+
+	<div class="content-box mrg25T">
+	    <h3 class="content-box-header bg-default">
+	            Framework
+			<div class="header-buttons-separator">
+			    <a href="#" class="icon-separator toggle-button">
+			        <i class="glyph-icon icon-chevron-up"></i>
+			    </a>
+			</div>
+	    </h3>
+	    <div class="content-box-wrapper">
+			<select name="" class="chosen-select">
+				<option>Select...</option>
+				
+				<option value="accordions.html">Accordions</option>
+				
+				<option value="badges.html">Badges</option>
+				
+				<option value="bs-carousel.html">Bootstrap carousel</option>
+				
+				<option value="bs-datepicker.html">Bootstrap datepicker</option>
+				
+				<option value="buttons.html">Buttons</option>
+				
+				<option value="calendar.html">Calendar</option>
+				
+				<option value="collapsable.html">Collapsable</option>
+				
+				<option value="colorpicker.html">Colorpicker</option>
+				
+				<option value="content-boxes.html">Content boxes</option>
+				
+				<option value="custom-scrollbars.html">Custom scrollbars</option>
+				
+				<option value="dashboard-boxes.html">Dashboard boxes</option>
+				
+				<option value="dialogs.html">Dialogs</option>
+				
+				<option value="dropzone-uploader.html">Dropzone uploader</option>
+				
+				<option value="dynamic-tables.html">Dynamic tables</option>
+				
+				<option value="forms-elements.html">Forms elements</option>
+				
+				<option value="forms-validation.html">Form validation</option>
+				
+				<option value="google-maps.html">Google maps</option>
+				
+				<option value="icons.html">Icons</option>
+				
+				<option value="image-crop.html">Image crop</option>
+				
+				<option value="images.html">Images</option>
+				
+				<option value="input-masks.html">Input masks</option>
+				
+				<option value="jgrowl-notifications.html">jGrowl notifications</option>
+				
+				<option value="jqueryui-datepicker.html">jQueryUI Datepicker</option>
+				
+				<option value="justgage.html">justGage</option>
+				
+				<option value="knobs.html">Knobs</option>
+				
+				<option value="labels.html">Labels</option>
+				
+				<option value="lazyload.html">Images preloader</option>
+				
+				<option value="loading-bar.html">Loading bar</option>
+				
+				<option value="modals.html">Modals</option>
+				
+				<option value="morris-charts.html">Morris charts</option>
+				
+				<option value="multi-upload.html">Multi uploader</option>
+				
+				<option value="navigation-menus.html">Navigation menus</option>
+				
+				<option value="noty-notifications.html">Noty notifications</option>
+				
+				<option value="overlays.html">Overlays</option>
+				
+				<option value="panel-boxes.html">Panel boxes</option>
+				
+				<option value="pie-gages.html">Pie Gages</option>
+				
+				<option value="plain-tables.html">Tables</option>
+				
+				<option value="popovers.html">Popovers</option>
+				
+				<option value="pretty-photo.html">Image lightbox modal</option>
+				
+				<option value="progress-bars.html">Progress bars</option>
+				
+				<option value="response-messages.html">Response messages</option>
+				
+				<option value="ribbons.html">Ribbons</option>
+				
+				<option value="scrollable-boxes.html">Scrollable boxes</option>
+				
+				<option value="sliders.html">Sliders</option>
+				
+				<option value="social-boxes.html">Social boxes</option>
+				
+				<option value="sortable.html">Sortable elements</option>
+				
+				<option value="sparklines.html">Sparklines</option>
+				
+				<option value="spinners.html">Loading indicators</option>
+				
+				<option value="tabs.html">Tabs</option>
+				
+				<option value="tile-boxes.html">Tile boxes</option>
+				
+				<option value="timeline.html">Timeline</option>
+				
+				<option value="timepicker.html">Timepicker</option>
+				
+				<option value="tooltips.html">Tooltips</option>
+				
+				<option value="vector-maps.html">Vector maps</option>
+				
+				<option value="wizard.html">Wizard</option>
+				
+				<option value="wysiwyg-editor.html">WYSIWYG Editors</option>
+				
+				<option value="xcharts.html">xCharts</option>
+				
+			</select>
+	    </div>
+	</div>
+
+	<div class="content-box mrg25T">
+	    <h3 class="content-box-header bg-default">
+	            Frontend
+			<div class="header-buttons-separator">
+			    <a href="#" class="icon-separator toggle-button">
+			        <i class="glyph-icon icon-chevron-up"></i>
+			    </a>
+			</div>
+	    </h3>
+	    <div class="content-box-wrapper">
+			<select name="" class="chosen-select">
+				<option>Select...</option>
+				
+				<option value="carousels.html">Carousels</option>
+				
+				<option value="featured-area.html">Featured areas</option>
+				
+				<option value="footer.html">Footers</option>
+				
+				<option value="header.html">Headers</option>
+				
+				<option value="icon-boxes.html">Icon boxes</option>
+				
+				<option value="page-titles.html">Page titles</option>
+				
+				<option value="portfolio.html">Portfolio</option>
+				
+				<option value="pricing-table.html">Pricing table</option>
+				
+				<option value="slideshows.html">Slideshows</option>
+				
+				<option value="testimonials.html">Testimonials</option>
+				
+			</select>
+	    </div>
+	</div>
+
+
+	<a href="../production/index.html" target="_blank" class="mrg25T btn display-block btn-primary btn-md" title="">View dashboard</a>
+
+</div>
+
+<script type="text/javascript">
+
+$(function() {
+
+	jQuery(".chosen-select").chosen().change( function(e){
+		window.location = jQuery(this).val();
+	});
+
+});
+
+$(document).ready(function() {
+
+	$('#docs-nav').hcSticky({
+		top: 0,
+		stickTo: document,
+	});
+
+});
+
+</script>
+
+        </div>
+        <div class="col-md-9">
+
+          
+
+<!-- xCharts charts -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/widgets/charts/xcharts/xcharts.css">
+<script type="text/javascript" src="../assets-minified/js-core/d3.js"></script>
+<script type="text/javascript" src="../assets-minified/widgets/charts/xcharts/xcharts.js"></script>
+
+<div id="page-content">
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="tile-box tile-box-alt bg-blue">
+                <div class="tile-header">
+                    Sent emails
+                </div>
+                <div class="tile-content-wrapper">
+                    <i class="glyph-icon icon-inbox"></i>
+                    <div class="tile-content">
+                        <i class="glyph-icon icon-caret-up font-red"></i>
+                        185
+                    </div>
+                    <small>
+                        <i class="glyph-icon icon-caret-up"></i>
+                        +7,6% email list penetration
+                    </small>
+                </div>
+                <a href="#" title="" class="tile-footer">
+                    view details
+                    <i class="glyph-icon icon-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="tile-box tile-box-alt bg-green">
+                <div class="tile-header">
+                    Cloud downloads
+                </div>
+                <div class="tile-content-wrapper">
+                    <i class="glyph-icon icon-cloud-download"></i>
+                    <div class="tile-content">
+                        <i class="glyph-icon icon-arrow-up font-green"></i>
+                        6.52
+                        <span>k</span>
+                    </div>
+                    <small>
+                        12% have started the download
+                    </small>
+                </div>
+                <a href="#" title="" class="tile-footer">
+                    view details
+                    <i class="glyph-icon icon-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="tile-box tile-box-alt bg-red" title="">
+                <div class="tile-header">
+                    Sales from your last visit
+                </div>
+                <div class="tile-content-wrapper">
+                    <i class="glyph-icon icon-credit-card"></i>
+                    <div class="tile-content">
+                        1.2<span>k</span>
+                    </div>
+                    <small>
+                        <i class="glyph-icon icon-caret-up"></i>
+                        $272 daily revenue from all sales
+                    </small>
+                </div>
+                <a href="#" title="" class="tile-footer">
+                    view details
+                    <i class="glyph-icon icon-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+
+
+            <div class="content-box border-top border-blue-alt mrg25B">
+                <h3 class="content-box-header">
+                    Server statistics
+                    <small>(The Ultimate Admin Template)</small>
+                    <div class="btn-group btn-group-sm float-right" data-toggle="buttons">
+                        <a href="#" class="btn btn-default">
+                            <input name="radio-toggle-1" type="radio">
+                            Weekly
+                        </a>
+                        <a href="#" class="btn btn-default">
+                            <input name="radio-toggle-2" type="radio">
+                            Monthly
+                        </a>
+                        <a href="#" class="btn btn-default">
+                            <input name="radio-toggle-3" type="radio">
+                            Yearly
+                        </a>
+                    </div>
+                </h3>
+                <div class="content-box-wrapper">
+                    <figure style="width: 95%; margin: 0 auto; display: block; height: 300px;" id="chart-example"></figure>
+                </div>
+            </div>
+
+            <div class="panel-layout mrg25T">
+                <div class="panel-box col-xs-6">
+
+                    <div class="panel-content bg-white">
+                        <canvas id="icon-cloud" width="80" height="80"></canvas>
+                    </div>
+                    <div class="panel-content bg-black">
+                        <div class="center-vertical">
+
+                            <ul class="center-content nav nav-justified">
+                                <li>
+                                    <h4>
+                                        <i class="glyph-icon font-green opacity-80 icon-chevron-down"></i>
+                                        7 º
+                                    </h4>
+                                    <p class="opacity-80 text-transform-upr font-size-11 mrg5T">Low</p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="glyph-icon font-red opacity-80 icon-chevron-up"></i>
+                                        21 º
+                                    </h4>
+                                    <p class="opacity-80 text-transform-upr font-size-11 mrg5T">High</p>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel-box col-xs-6 bg-blue-alt">
+                    <div class="panel-content">
+                        <h3>Bucharest</h3>
+                        <h4 class="opacity-60">Romania</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-box mrg25T mrg25B">
+                <h3 class="content-box-header content-box-header-alt bg-white">
+                <span class="icon-separator">
+                    <i class="glyph-icon icon-cog"></i>
+                </span>
+                    <div class="header-wrapper">
+                        Content title
+                        <small>Example header title description</small>
+                    </div>
+                    <div class="header-buttons">
+                        <a href="#" class="btn btn-sm btn-link font-white" title="">Link</a>
+                        <a href="#" class="btn btn-sm btn-default no-border" title="">Small</a>
+                    </div>
+                </h3>
+                <div class="content-box-wrapper">
+                    <div class="timeline-box mrg25A">
+                        <div class="tl-row">
+                            <div class="tl-item">
+                                <div class="tl-icon bg-green">
+                                    <i class="glyph-icon icon-cog"></i>
+                                </div>
+                                <div class="tl-panel">
+                                    3:21 PM
+                                </div>
+                                <div class="popover left">
+                                    <div class="arrow"></div>
+                                    <div class="popover-content">
+                                        <div class="tl-label bs-label label-success">Meeting</div>
+                                        <p class="tl-content">Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
+                                        <div class="tl-time">
+                                            <i class="glyph-icon icon-clock-o"></i>
+                                            a few seconds ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tl-row">
+                            <div class="tl-item float-right">
+                                <div class="tl-icon bg-black">
+                                    <i class="glyph-icon icon-cog"></i>
+                                </div>
+                                <div class="tl-panel">
+                                    3:21 PM
+                                </div>
+                                <div class="popover right">
+                                    <div class="arrow"></div>
+                                    <div class="popover-content">
+                                        <div class="tl-label bs-label label-info">Appointment</div>
+                                        <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. </p>
+                                        <div class="tl-time">
+                                            <i class="glyph-icon icon-clock-o"></i>
+                                            a few seconds ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tl-row">
+                            <div class="tl-item">
+                                <div class="tl-icon bg-green">
+                                    <i class="glyph-icon icon-cog"></i>
+                                </div>
+                                <div class="tl-panel">
+                                    3:21 PM
+                                </div>
+                                <div class="popover left">
+                                    <div class="arrow"></div>
+                                    <div class="popover-content">
+                                        <div class="tl-label bs-label label-success">Meeting</div>
+                                        <p class="tl-content">Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
+                                        <div class="tl-time">
+                                            <i class="glyph-icon icon-clock-o"></i>
+                                            a few seconds ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tl-row demo-margin">
+                            <div class="tl-item float-right">
+                                <div class="tl-icon bg-black">
+                                    <i class="glyph-icon icon-cog"></i>
+                                </div>
+                                <div class="tl-panel">
+                                    3:21 PM
+                                </div>
+                                <div class="popover right">
+                                    <div class="arrow"></div>
+                                    <div class="popover-content">
+                                        <div class="tl-label bs-label label-info">Appointment</div>
+                                        <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. </p>
+                                        <div class="tl-time">
+                                            <i class="glyph-icon icon-clock-o"></i>
+                                            a few seconds ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel-layout">
+                <div class="panel-box col-xs-4 bg-green">
+                    <div class="panel-content">
+                        <h4>Overview</h4>
+                        <p class="opacity-60">Example panel box</p>
+                    </div>
+                </div>
+                <div class="panel-box col-xs-8">
+
+                    <div class="panel-content  bg-black">
+                        <div class="sparkline-big">183,579,180,311,240,180,311,450,302,370,210,610</div>
+                    </div>
+                    <div class="panel-content bg-white">
+                        <div class="center-vertical">
+
+                            <ul class="center-content nav nav-justified">
+                                <li>
+                                    <h4 class="font-green">+$39,45</h4>
+                                    <p class="font-gray">Overdue orders</p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="glyph-icon opacity-60 icon-caret-up"></i>
+                                        217
+                                    </h4>
+                                    <p class="font-gray">Pending orders</p>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="panel-layout">
+                        <div class="panel-box">
+
+                            <div class="panel-content bg-facebook">
+
+                                <i class="glyph-icon font-size-35 icon-facebook"></i>
+
+                            </div>
+                            <div class="panel-content pad15A bg-white">
+                                <div class="center-vertical">
+
+                                    <ul class="center-content list-group list-group-separator row mrg0A">
+                                        <li class="col-md-6">
+                                            <b>1,456</b>
+                                            <p class="font-gray">Friends</p>
+                                        </li>
+                                        <li class="col-md-6">
+                                            <b>593</b>
+                                            <p class="font-gray">Likes</p>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+
+                    <div class="panel-layout">
+                        <div class="panel-box">
+
+                            <div class="panel-content bg-twitter">
+
+                                <i class="glyph-icon font-size-35 icon-twitter"></i>
+
+                            </div>
+                            <div class="panel-content pad15A bg-white">
+                                <div class="center-vertical">
+
+                                    <ul class="center-content list-group list-group-separator row mrg0A">
+                                        <li class="col-md-6">
+                                            <b>356</b>
+                                            <p class="font-gray">Followers</p>
+                                        </li>
+                                        <li class="col-md-6">
+                                            <b>981</b>
+                                            <p class="font-gray">Tweets</p>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-layout">
+                        <div class="panel-box">
+
+                            <div class="panel-content bg-white">
+
+                                <div class="">
+                                    <img src="../assets-minified/dummy-images/people/testimonial3.jpg" alt="" style="width: 60px;" class="img-bordered border-red img-circle mrg10B">
+                                    <h5 class="font-bold">Johnny Anderson</h5>
+                                </div>
+
+                            </div>
+                            <div class="panel-content pad15A bg-white">
+                                <div class="center-vertical">
+
+                                    <ul class="center-content list-group list-group-separator row mrg0A">
+                                        <li class="col-md-6">
+                                            <a href="#" title="">
+                                                <i class="glyph-icon opacity-60 icon-inbox"></i>
+                                                <p class="mrg5T">Inbox</p>
+                                            </a>
+                                        </li>
+                                        <li class="col-md-6">
+                                            <a href="#" title="">
+                                                <i class="glyph-icon opacity-60 icon-group"></i>
+                                                <p class="mrg5T">Groups</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="content-box bg-white post-box">
+                        <textarea name="" class="textarea-autosize" id="" placeholder="What are you doing right now?"></textarea>
+                        <div class="button-pane">
+                            <a href="#" class="btn btn-md btn-link hover-white" title="">
+                                <i class="glyph-icon icon-volume-down"></i>
+                            </a>
+                            <a href="#" class="btn btn-md btn-link hover-white" title="">
+                                <i class="glyph-icon icon-video-camera"></i>
+                            </a>
+                            <a href="#" class="btn btn-md btn-link hover-white" title="">
+                                <i class="glyph-icon icon-microphone"></i>
+                            </a>
+                            <a href="#" class="btn btn-md btn-link hover-white" title="">
+                                <i class="glyph-icon icon-picture-o"></i>
+                            </a>
+
+                            <a href="#" class="btn btn-md btn-post float-right btn-success" title="">
+                                Share it!
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="panel-layout">
+                        <div class="panel-box">
+
+                            <div class="panel-content image-box">
+                                <div class="corner-ribbon">
+                                    <a href="#" class="btn-success" title="">
+                                        <i class="glyph-icon icon-comment-o"></i>
+                                    </a>
+                                </div>
+                                <div class="image-content font-white">
+                                    <div class="center-vertical">
+                                        <div class="center-content">
+                                            <div class="sparkline-big">183,579,180,311,240,180,311,450,302,370,210,610</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="../assets-minified/dummy-images/455293175_1280.jpg" alt="">
+
+                            </div>
+                            <div class="panel-content pad0A bg-white">
+                                <div class="meta-box meta-box-offset">
+                                    <img src="http://placehold.it/82x82" alt="" class="meta-image img-bordered img-circle">
+                                    <h3 class="meta-heading font-size-16">Alex Rosenberg</h3>
+                                    <h4 class="meta-subheading font-size-13 font-gray">Ultimate backend programmer</h4>
+                                </div>
+                                <table class="table mrg0B mrg10T">
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left">
+                                                <b>UI design</b>
+                                            </td>
+                                            <td style="width: 50%;">
+                                                <div class="progressbar-small progressbar" data-value="95">
+                                                    <div class="progressbar-value bg-red tooltip-button" title="95%">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <b>Web development</b>
+                                            </td>
+                                            <td style="width: 50%;">
+                                                <div class="progressbar-small progressbar" data-value="45">
+                                                    <div class="progressbar-value bg-azure tooltip-button" title="45%">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <b>CSS skills</b>
+                                            </td>
+                                            <td style="width: 50%;">
+                                                <div class="progressbar-small progressbar" data-value="85">
+                                                    <div class="progressbar-value bg-green tooltip-button" title="85%">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <b>Photoshop</b>
+                                            </td>
+                                            <td style="width: 50%;">
+                                                <div class="progressbar-small progressbar" data-value="75">
+                                                    <div class="progressbar-value bg-yellow tooltip-button" title="45%">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <b>Others</b>
+                                            </td>
+                                            <td style="width: 20%;">
+                                                <div class="progressbar-small progressbar" data-value="20">
+                                                    <div class="progressbar-value bg-blue tooltip-button" title="20%">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <b>Skills</b>
+                                            </td>
+                                            <td style="width: 87%;">
+                                                <div class="progressbar-small progressbar" data-value="87">
+                                                    <div class="progressbar-value bg-orange tooltip-button" title="87%">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="dashboard-box bg-white content-box mrg25T">
+                        <div class="content-wrapper">
+                            <div class="header">
+                                Monthly evolution
+                                <span>July - December 2013</span>
+                            </div>
+                            <div class="center-div sparkline-bar-big-color">183,579,180,311,405,342,579,405,311,311,450,302,370,510,405,342,579,405,311,311,450,302,370,510</div>
+                        </div>
+                        <div class="button-pane">
+                            <div class="size-md float-left heading">
+                                Overdue orders
+                            </div>
+                            <a href="#" class="btn btn-info float-right tooltip-button" data-placement="top" title="" data-original-title="Remove comment">
+                                <i class="glyph-icon icon-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div><!-- #page-content -->
+
+<script type="text/javascript">
+
+    $(function () {
+
+        var tt = document.createElement('div'),
+                leftOffset = -(~~$('html').css('padding-left').replace('px', '') + ~~$('body').css('margin-left').replace('px', '')),
+                topOffset = -32;
+        tt.className = 'tooltip top fade in';
+        document.body.appendChild(tt);
+
+        var data = [{"xScale":"ordinal","comp":[],"main":[{"className":".main.l1","data":[{"y":15,"x":"2012-11-19T00:00:00"},{"y":11,"x":"2012-11-20T00:00:00"},{"y":8,"x":"2012-11-21T00:00:00"},{"y":10,"x":"2012-11-22T00:00:00"},{"y":1,"x":"2012-11-23T00:00:00"},{"y":6,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]},{"className":".main.l2","data":[{"y":29,"x":"2012-11-19T00:00:00"},{"y":33,"x":"2012-11-20T00:00:00"},{"y":13,"x":"2012-11-21T00:00:00"},{"y":16,"x":"2012-11-22T00:00:00"},{"y":7,"x":"2012-11-23T00:00:00"},{"y":18,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]}],"type":"line-dotted","yScale":"linear"},{"xScale":"ordinal","comp":[],"main":[{"className":".main.l1","data":[{"y":12,"x":"2012-11-19T00:00:00"},{"y":18,"x":"2012-11-20T00:00:00"},{"y":8,"x":"2012-11-21T00:00:00"},{"y":7,"x":"2012-11-22T00:00:00"},{"y":6,"x":"2012-11-23T00:00:00"},{"y":12,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]},{"className":".main.l2","data":[{"y":29,"x":"2012-11-19T00:00:00"},{"y":33,"x":"2012-11-20T00:00:00"},{"y":13,"x":"2012-11-21T00:00:00"},{"y":16,"x":"2012-11-22T00:00:00"},{"y":7,"x":"2012-11-23T00:00:00"},{"y":18,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]}],"type":"cumulative","yScale":"linear"},{"xScale":"ordinal","comp":[],"main":[{"className":".main.l1","data":[{"y":12,"x":"2012-11-19T00:00:00"},{"y":18,"x":"2012-11-20T00:00:00"},{"y":8,"x":"2012-11-21T00:00:00"},{"y":7,"x":"2012-11-22T00:00:00"},{"y":6,"x":"2012-11-23T00:00:00"},{"y":12,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]},{"className":".main.l2","data":[{"y":29,"x":"2012-11-19T00:00:00"},{"y":33,"x":"2012-11-20T00:00:00"},{"y":13,"x":"2012-11-21T00:00:00"},{"y":16,"x":"2012-11-22T00:00:00"},{"y":7,"x":"2012-11-23T00:00:00"},{"y":18,"x":"2012-11-24T00:00:00"},{"y":8,"x":"2012-11-25T00:00:00"}]}],"type":"bar","yScale":"linear"}];
+        var order = [0, 1, 0, 2],
+                i = 0,
+                xFormat = d3.time.format('%A'),
+                chart = new xChart('line-dotted', data[order[i]], '#chart-example', {
+                    axisPaddingTop: 5,
+                    dataFormatX: function (x) {
+                        return new Date(x);
+                    },
+                    tickFormatX: function (x) {
+                        return xFormat(x);
+                    },
+                    mouseover: function (d, i) {
+                        var pos = $(this).offset();
+                        $(tt).html('<div class="arrow"></div><div class="tooltip-inner">'+d3.time.format('%A')(d.x) + ': ' + d.y+'</div>')
+                                .css({top: topOffset + pos.top, left: pos.left + leftOffset})
+                                .show();
+                    },
+                    mouseout: function (x) {
+                        $(tt).hide();
+                    },
+                    timing: 1250
+                }),
+                rotateTimer,
+                toggles = d3.selectAll('#upd-chart a'),
+                t = 3500;
+
+        function updateChart(i) {
+            var d = data[i];
+            chart.setData(d);
+            toggles.classed('active', function () {
+                return (d3.select(this).attr('data-type') === d.type);
+            });
+            return d;
+        }
+
+        toggles.on('click', function (d, i) {
+            clearTimeout(rotateTimer);
+            updateChart(i);
+        });
+
+        function rotateChart() {
+            i += 1;
+            i = (i >= order.length) ? 0 : i;
+            var d = updateChart(order[i]);
+            rotateTimer = setTimeout(rotateChart, t);
+        }
+        rotateTimer = setTimeout(rotateChart, t);
+    }());
+</script>
+
+        </div>
+    </div>
+
+
+
+    <!-- WIDGETS -->
+
+
+
+    <!-- WIDGETS -->
+
+    <!-- Bootstrap Dropdown -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/dropdown/dropdown.css">
+    <script type="text/javascript" src="../assets-minified/widgets/dropdown/dropdown.js"></script>
+
+    <!-- PieGage charts -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/charts/piegage/piegage.css">
+    <script type="text/javascript" src="../assets-minified/widgets/charts/piegage/piegage.js"></script>
+    <script type="text/javascript" src="../assets-minified/widgets/charts/piegage/piegage-demo.js"></script>
+
+    <!-- Bootstrap Tooltip -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/tooltip/tooltip.css">
+    <script type="text/javascript" src="../assets-minified/widgets/tooltip/tooltip.js"></script>
+
+    <!-- Bootstrap Popover -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/popover/popover.css">
+    <script type="text/javascript" src="../assets-minified/widgets/popover/popover.js"></script>
+
+
+    <!-- Bootstrap Buttons -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/button/button.js"></script>
+
+    <!-- Bootstrap Collapse -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/collapse/collapse.js"></script>
+
+    <!-- Bootstrap Progress Bar -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/progressbar/progressbar.css">
+    <script type="text/javascript" src="../assets-minified/widgets/progressbar/progressbar.js"></script>
+
+    <!-- Uniform -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/uniform/uniform.css">
+    <script type="text/javascript" src="../assets-minified/widgets/uniform/uniform.js"></script>
+
+    <!-- Chosen -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/chosen/chosen.css">
+    <script type="text/javascript" src="../assets-minified/widgets/chosen/chosen.js"></script>
+
+    <!-- Superfish -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/superfish/superfish.js"></script>
+
+    <!-- Superclick -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/superclick/superclick.js"></script>
+
+    <!-- Nice scroll -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/nicescroll/nicescroll.js"></script>
+
+    <!-- Overlay -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/overlay/overlay.js"></script>
+
+    <!-- jQueryUI Autocomplete -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/autocomplete/autocomplete.js"></script>
+    <script type="text/javascript" src="../assets-minified/widgets/autocomplete/menu.js"></script>
+
+    <!-- Skycons -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/skycons/skycons.js"></script>
+
+    <!-- Content box -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/content-box/contentbox.js"></script>
+
+    <!-- Bootstrap Tabs -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/tabs/tabs.js"></script>
+
+    <!-- Sparklines charts -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/charts/sparklines/sparklines.js"></script>
+    <script type="text/javascript" src="../assets-minified/widgets/charts/sparklines/sparklines-demo.js"></script>
+
+    <!-- Slidebars -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/slidebars/slidebars.css">
+    <script type="text/javascript" src="../assets-minified/widgets/slidebars/slidebars.js"></script>
+
+    <!-- Widgets init for demo -->
+
+    <script type="text/javascript" src="../assets-minified/widgets-init.js"></script>
+
+    <!-- Theme layout -->
+
+    <script type="text/javascript" src="../assets-minified/themes/supina/js/layout.js"></script>
+
+
+
+
+
+
+</body> 
+</html> 

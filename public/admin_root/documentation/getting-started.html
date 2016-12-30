@@ -1,0 +1,616 @@
+<!DOCTYPE html> 
+<html lang ="en">
+<head> 
+
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> Getting started </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicons -->
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets-minified/images/icons/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets-minified/images/icons/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets-minified/images/icons/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets-minified/images/icons/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets-minified/images/icons/favicon.png">
+
+
+
+    <!-- JS Core -->
+
+    <script type="text/javascript" src="../assets-minified/js-core.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(window).load(function(){
+            setTimeout(function() {
+                $('#loading').fadeOut( 400, "linear" );
+            }, 300);
+        });
+    </script>
+    <style>
+        #loading {position: fixed;width: 100%;height: 100%;left: 0;top: 0;right: 0;bottom: 0;display: block;background: #fff;z-index: 10000;}
+        #loading img {position: absolute;top: 50%;left: 50%;margin: -23px 0 0 -23px;}
+    </style>
+
+
+
+    <!-- HELPERS -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/helpers/helpers-all.css">
+
+<!-- ELEMENTS -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/elements/elements-all.css">
+
+<!-- Icons -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/icons/fontawesome/fontawesome.css">
+<link rel="stylesheet" type="text/css" href="../assets-minified/icons/linecons/linecons.css">
+
+<!-- SNIPPETS -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/snippets/snippets-all.css">
+
+<!-- APPLICATIONS -->
+
+<link rel="stylesheet" type="text/css" href="../assets-minified/applications/mailbox.css">
+
+
+
+    <!-- HG sticky -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/sticky/sticky.js"></script>
+
+    <!-- Highlight -->
+
+    <link class="remove-production" rel="stylesheet" type="text/css" href="../assets-minified/widgets/prism/prism.css">
+    <script class="remove-production" type="text/javascript" src="../assets-minified/widgets/prism/prism.js"></script>
+    <script class="remove-production" type="text/javascript">
+        $(document).ready(function() {
+
+            $('.language-markup').each(function(i){
+                $(this).text($(this).html());
+            });
+
+            $('.source-btn').click(function(){
+                $(this).parent().parent().find('.example-html').addClass('show-source');
+                $('body').append('<div id="example-overlay" class="ui-widget-overlay bg-black opacity-60"></div>');
+                $('.example-close-modal').show();
+            });
+
+            $('.example-close-modal').click(function(){
+                $('#example-overlay').remove();
+                $('.example-html').removeClass('show-source');
+                $('.example-close-modal').hide();
+            });
+
+        });
+
+    </script>
+
+    <!-- Demo -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/demo.css">
+
+    <!-- FRONTEND ELEMENTS -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/frontend-elements/frontend-elements-all.css">
+
+    <!-- Admin Theme -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/themes/supina/layout.css">
+    <link id="layout-color" rel="stylesheet" type="text/css" href="../assets-minified/themes/supina/default/layout-color.css">
+    <link id="framework-color" rel="stylesheet" type="text/css" href="../assets-minified/themes/supina/default/framework-color.css">
+    <link rel="stylesheet" type="text/css" href="../assets-minified/themes/supina/border-radius.css">
+
+    <script type="text/javascript" src="../assets-minified/themes/supina/js/layout.js"></script>
+    <script type="text/javascript" src="../assets-minified/widgets/wow/wow.js"></script>
+    <!-- Frontend Theme -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/themes/supina/frontend/color.css">
+    <script type="text/javascript" src="../assets-minified/themes/supina/frontend/js/frontend-init.js"></script>
+
+    <!-- Color Helpers CSS -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/helpers/colors.css">
+    <style>
+    .remove-docs {
+        display: none;
+    }
+    </style>
+
+</head> 
+<body class="docs-layout">
+    <div id="loading" class="ui-front hide loader ui-widget-overlay bg-white opacity-100"><img src="../assets-minified/images/spinner/loader-dark.gif" alt=""></div>
+    <div class="row" style="margin: 0;">
+        <div class="col-md-3">
+
+            <div id="docs-nav">
+
+	<div class="content-box mrg25T">
+	    <h3 class="content-box-header bg-default">
+	            Admin templates
+			<div class="header-buttons-separator">
+			    <a href="#" class="icon-separator toggle-button">
+			        <i class="glyph-icon icon-chevron-up"></i>
+			    </a>
+			</div>
+	    </h3>
+	    <div class="content-box-wrapper">
+			<select name="" class="chosen-select">
+				<option>Select...</option>
+				
+				<option value="applications.html">Applications</option>
+				
+				<option value="admin-layouts.html">Layout pages</option>
+				
+				<option value="admin-navigation.html">Navigation menus</option>
+				
+				<option value="breadcrumbs.html">Breadcrumb</option>
+				
+				<option value="dashboard.html">Dashboards</option>
+				
+				<option value="lockscreen-page.html">Lockscreen pages</option>
+				
+				<option value="login-page.html">Login pages</option>
+				
+				<option value="server-page.html">Server response</option>
+				
+				<option value="animations.html">Animations</option>
+				
+				<option value="chat.html">Chat</option>
+				
+				<option selected value="getting-started.html">Getting started</option>
+				
+				<option value="helper-classes.html">Helper classes</option>
+				
+				<option value="page-transitions.html">Page transitions</option>
+				
+				<option value="slidebars.html">Slidebars</option>
+				
+				<option value="snippets.html">Snippets</option>
+				
+				<option value="todo.html">Checklist</option>
+				
+			</select>
+	    </div>
+	</div>
+
+	<div class="content-box mrg25T">
+	    <h3 class="content-box-header bg-default">
+	            Framework
+			<div class="header-buttons-separator">
+			    <a href="#" class="icon-separator toggle-button">
+			        <i class="glyph-icon icon-chevron-up"></i>
+			    </a>
+			</div>
+	    </h3>
+	    <div class="content-box-wrapper">
+			<select name="" class="chosen-select">
+				<option>Select...</option>
+				
+				<option value="accordions.html">Accordions</option>
+				
+				<option value="badges.html">Badges</option>
+				
+				<option value="bs-carousel.html">Bootstrap carousel</option>
+				
+				<option value="bs-datepicker.html">Bootstrap datepicker</option>
+				
+				<option value="buttons.html">Buttons</option>
+				
+				<option value="calendar.html">Calendar</option>
+				
+				<option value="collapsable.html">Collapsable</option>
+				
+				<option value="colorpicker.html">Colorpicker</option>
+				
+				<option value="content-boxes.html">Content boxes</option>
+				
+				<option value="custom-scrollbars.html">Custom scrollbars</option>
+				
+				<option value="dashboard-boxes.html">Dashboard boxes</option>
+				
+				<option value="dialogs.html">Dialogs</option>
+				
+				<option value="dropzone-uploader.html">Dropzone uploader</option>
+				
+				<option value="dynamic-tables.html">Dynamic tables</option>
+				
+				<option value="forms-elements.html">Forms elements</option>
+				
+				<option value="forms-validation.html">Form validation</option>
+				
+				<option value="google-maps.html">Google maps</option>
+				
+				<option value="icons.html">Icons</option>
+				
+				<option value="image-crop.html">Image crop</option>
+				
+				<option value="images.html">Images</option>
+				
+				<option value="input-masks.html">Input masks</option>
+				
+				<option value="jgrowl-notifications.html">jGrowl notifications</option>
+				
+				<option value="jqueryui-datepicker.html">jQueryUI Datepicker</option>
+				
+				<option value="justgage.html">justGage</option>
+				
+				<option value="knobs.html">Knobs</option>
+				
+				<option value="labels.html">Labels</option>
+				
+				<option value="lazyload.html">Images preloader</option>
+				
+				<option value="loading-bar.html">Loading bar</option>
+				
+				<option value="modals.html">Modals</option>
+				
+				<option value="morris-charts.html">Morris charts</option>
+				
+				<option value="multi-upload.html">Multi uploader</option>
+				
+				<option value="navigation-menus.html">Navigation menus</option>
+				
+				<option value="noty-notifications.html">Noty notifications</option>
+				
+				<option value="overlays.html">Overlays</option>
+				
+				<option value="panel-boxes.html">Panel boxes</option>
+				
+				<option value="pie-gages.html">Pie Gages</option>
+				
+				<option value="plain-tables.html">Tables</option>
+				
+				<option value="popovers.html">Popovers</option>
+				
+				<option value="pretty-photo.html">Image lightbox modal</option>
+				
+				<option value="progress-bars.html">Progress bars</option>
+				
+				<option value="response-messages.html">Response messages</option>
+				
+				<option value="ribbons.html">Ribbons</option>
+				
+				<option value="scrollable-boxes.html">Scrollable boxes</option>
+				
+				<option value="sliders.html">Sliders</option>
+				
+				<option value="social-boxes.html">Social boxes</option>
+				
+				<option value="sortable.html">Sortable elements</option>
+				
+				<option value="sparklines.html">Sparklines</option>
+				
+				<option value="spinners.html">Loading indicators</option>
+				
+				<option value="tabs.html">Tabs</option>
+				
+				<option value="tile-boxes.html">Tile boxes</option>
+				
+				<option value="timeline.html">Timeline</option>
+				
+				<option value="timepicker.html">Timepicker</option>
+				
+				<option value="tooltips.html">Tooltips</option>
+				
+				<option value="vector-maps.html">Vector maps</option>
+				
+				<option value="wizard.html">Wizard</option>
+				
+				<option value="wysiwyg-editor.html">WYSIWYG Editors</option>
+				
+				<option value="xcharts.html">xCharts</option>
+				
+			</select>
+	    </div>
+	</div>
+
+	<div class="content-box mrg25T">
+	    <h3 class="content-box-header bg-default">
+	            Frontend
+			<div class="header-buttons-separator">
+			    <a href="#" class="icon-separator toggle-button">
+			        <i class="glyph-icon icon-chevron-up"></i>
+			    </a>
+			</div>
+	    </h3>
+	    <div class="content-box-wrapper">
+			<select name="" class="chosen-select">
+				<option>Select...</option>
+				
+				<option value="carousels.html">Carousels</option>
+				
+				<option value="featured-area.html">Featured areas</option>
+				
+				<option value="footer.html">Footers</option>
+				
+				<option value="header.html">Headers</option>
+				
+				<option value="icon-boxes.html">Icon boxes</option>
+				
+				<option value="page-titles.html">Page titles</option>
+				
+				<option value="portfolio.html">Portfolio</option>
+				
+				<option value="pricing-table.html">Pricing table</option>
+				
+				<option value="slideshows.html">Slideshows</option>
+				
+				<option value="testimonials.html">Testimonials</option>
+				
+			</select>
+	    </div>
+	</div>
+
+
+	<a href="../production/index.html" target="_blank" class="mrg25T btn display-block btn-primary btn-md" title="">View dashboard</a>
+
+</div>
+
+<script type="text/javascript">
+
+$(function() {
+
+	jQuery(".chosen-select").chosen().change( function(e){
+		window.location = jQuery(this).val();
+	});
+
+});
+
+$(document).ready(function() {
+
+	$('#docs-nav').hcSticky({
+		top: 0,
+		stickTo: document,
+	});
+
+});
+
+</script>
+
+        </div>
+        <div class="col-md-9">
+
+          
+
+    <h2 class="title-hero">
+        Getting started
+    </h2>
+    <p class="title-lead">Below you will find a quick getting started guide. The left side menu contains the documentation for each page, widget, element or component presented in the demo.</p>
+
+    <div class="divider"></div>
+
+    <h3 class="title-hero">
+        What is Supina?
+    </h3>
+    <p class="title-lead">Supina is a HTML/CSS/JS framework that helps you quickly build modern, beautiful and accessible user interfaces for interactive web applications. It is powered by jQuery, Twitter Bootstrap and a bunch of other curated widgets &amp; plugins. Supina includes a lot of UI interactions, effects, elements, components and themes. These featured make it a very powerful companion when it comes to solving all kinds of use cases. Read through the documentation to get an idea of how many widgets and elements are available.</p>
+
+    <div class="divider"></div>
+
+    <h3>Who is it for?</h3>
+    <p class="font-gray-dark">Supina can be used by designers and developers alike. Designers will find the theming and assets-minified separation very useful and easy to modify. Because, in general, developers do not have an eye for design, the AUI framework helps them by removing the design-related issues and lets them concentrate on the app programming part.</p>
+
+    <div class="divider"></div>
+
+    <h3>Technologies used</h3>
+    <p class="font-gray-dark">Supina uses modern CSS3 solutions, jQuery, jQueryUI, Bootstrap, RaphaelJS, Handebars templates and other jQuery plugins.</p>
+
+    <div class="divider"></div>
+
+    <h2>Installing and Getting Started</h2>
+
+    <p class="font-gray-dark">First you need to download and uzip the Supina package archive.</p>
+    <p class="font-gray-dark">The package contains the following:</p>
+    <ul>
+        <li><b>assets-minified</b> - contains all the source code CSS, JS, fonts and images uncompressed, development versions.</li>
+        <li><b>assets-minified-minified</b> - contains all the css, js files, minified, ready for production.</li>
+        <li><b>src</b> - contains all the handlebars templating files used in the generation of the demonstation &amp; documentation files.</li>
+        <li><b>documentation</b> - contains the documentation files</li>
+        <li><b>production</b> - contains example HTML files with all widgets &amp; elements in action</li>
+        <li><b>changelog.txt</b> - changelog between version</li>
+        <li><b>Gruntfile.js</b> - contains Grunt tasks that can be used to generate the production-ready, minified assets-minified and compile template</li>
+        <li><b>Readme.md</b> - General informations about the template</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>assets-minified</h3>
+    <p class="font-gray-dark">The assets-minified directory (/assets-minified/) contains the development (uncompressed) files that are used in the site. For production ready enviroments we suggest using the files from the /assets-minified-minified/ directory because they take a lot less space.</p>
+    <p class="font-gray-dark">The assets-minified directory structure:</p>
+    <ul>
+        <li><b>applications</b> - contains the CSS files for different applications embedded in Supina, for example, the Mailbox page.</li>
+        <li><b>elements</b> - contains all CSS files used for creating different types of elements, for example, ribbons.css, buttons.css, etc. They are used for both the admin backend template and for the frontend presentation website.</li>
+        <li><b>snippets</b> - contains all CSS files for different snippets used through out the template, like todo lists, notification boxes, chat, etc.</li>
+        <li><b>frontend-elements</b> - contains the CSS files specific for the frontend presentation template, for example, pricing-tables.css, portfolio-navigation.css, etc.</li>
+        <li><b>helpers</b> - contains all CSS files used for resets, or recurring tasks, for example, grid.css, page-transitions.css, typography.css, spacing.css, etc.</li>
+        <li><b>icons</b> - contains all directories with files specific to an icon category. For example, the FontAwesome icon fonts and CSS file are located in /icons/fontawesome/.</li>
+        <li><b>dummy-images</b> - contains images that are used for demonstation purposes only in our presentation.</li>
+        <li><b>images</b> - contains all images that are used by other elements, for example, /images/spinner/loader-light.gif - which is used by the loading overlay element.</li>
+        <li><b>js-core</b> - contains all Javascript core plugins, like jquery-core.js, raphael.js, etc.</li>
+        <li><b>widgets</b> - contains all widgets used in the Supina template. Each widget has its own directory containing the javascript core, css core and javascript demo initialization.</li>
+        <li><b>themes</b> - contains the files needed for the color and style customisations.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>Themes</h3>
+    <p class="font-gray-dark">The Supina themes can be found in the /assets-minified/themes/ directory. If you open the /themes/ directory right now, you will see the /supina/ sub-directory which contains all the CSS files used for applying style and color for the template layout, widgets and elements.</p>
+
+    <h4>layout.css</h4>
+    <p class="font-gray-dark">This file contains the structural classes used for the main template layout. If you were to change the width of the sidebar element, this is the file that you need to edit.</p>
+
+    <h4>layout-color.css</h4>
+    <p class="font-gray-dark">This file contains the styling classes used for the main template layout. For example, this is the file where the sidebar background color and sidebar links colors are defined.</p>
+
+    <h4>framework-color.css</h4>
+    <p class="font-gray-dark">This file contains the styling classes used for widgets and elements. Each widget and element has its own CSS file that handles their structure, like how much spacing should a button have, how tall should it be or similar stuff. To add color &amp; style to that structure you need to edit the framework-color.css file. It contains multiple CSS classes with the same styling based on their role.</p>
+
+    <h4>/js/layout.js</h4>
+    <p class="font-gray-dark">This file contains the jQuery scripts used to build the layout template, for example, it contains a function that sets the sidebar height to 100% of the viewport height. This is included in the themes sub-directory because the layout parameters may vary from a theme to another.</p>
+
+    <div class="divider"></div>
+
+    <h2>Minified assets-minified</h2>
+    <p class="font-gray-dark">You can find the CSS, JS, image files minified in the /assets-minified-minified/ directory.</p>
+
+    <div class="divider"></div>
+
+    <h2>Core files</h2>
+    <p class="font-gray-dark">The files below should be removed from templates only in special cases that require to.</p>
+    <b>Javascript core:</b>
+    <ul>
+        <li>/assets-minified/js-core/*.js</li>
+        <li>/assets-minified/themes/supina/*.js</li>
+    </ul>
+    <b>CSS core:</b>
+    <ul>
+        <li>/assets-minified/helpers/*.css</li>
+        <li>/assets-minified/elements/*.css</li>
+        <li>/assets-minified/themes/supina/*.css</li>
+    </ul>
+
+    <h2>Automations</h2>
+    <p class="font-gray-dark">To generate the demonstration and documentation files we use Grunt - the javascript task runner. To find out more about it read the <a href="http://gruntjs.com/getting-started" target="_blank" title="Grunt.js documentation">Grunt.js documentation</a>.</p>
+    <p class="font-gray-dark">We also use grunt to automate the minification and concatenation of the assets-minified.</p>
+    <b>Install dependencies:</b>
+    <ol>
+        <li><b>Install NodeJS</b> - brew install nodejs npm</li>
+        <li><b>Install GruntJS</b> - sudo npm install -g grunt</li>
+        <li><b>Install NPM packages</b> - sudo npm install</li>
+    </ol>
+
+    <b>Grunt tasks aliases:</b>
+    <p class="font-gray-dark">You can find all the available grunt tasks in Gruntfile.js</p>
+    <ul>
+        <li><b>"all"</b> - builds the complete solution for documentation & production. It also create the /assets-minified-minified/ production-ready directory.</li>
+        <li><b>"server"</b> - creates a server on http://localhost:8585 that points to the build files. This way you don't have to install WAMP,XAMPP or MAMP on your local environment.</li>
+        <li><b>Install NPM packages</b> - sudo npm install</li>
+    </ul>
+
+    <h2>Help &amp; Support</h2>
+    <p class="font-gray-dark">If you encounter bugs or problems with Supina feel free to email us at support@agileui.com or to write in the comments area on the marketplace. Send your suggestions and feature requests at office@agileui.com</p>
+
+
+    <h2>Custom services</h2>
+    <p class="font-gray-dark">You can hire us to create custom application user interfaces based on Supina or to integrate Supina in your existing projects. Drop us a line at contact@agileui.com describing your requirements and we'll send you a quotation. View our portfolio at http://horiasimon.com</p>
+
+        </div>
+    </div>
+
+
+
+    <!-- WIDGETS -->
+
+
+
+    <!-- WIDGETS -->
+
+    <!-- Bootstrap Dropdown -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/dropdown/dropdown.css">
+    <script type="text/javascript" src="../assets-minified/widgets/dropdown/dropdown.js"></script>
+
+    <!-- PieGage charts -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/charts/piegage/piegage.css">
+    <script type="text/javascript" src="../assets-minified/widgets/charts/piegage/piegage.js"></script>
+    <script type="text/javascript" src="../assets-minified/widgets/charts/piegage/piegage-demo.js"></script>
+
+    <!-- Bootstrap Tooltip -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/tooltip/tooltip.css">
+    <script type="text/javascript" src="../assets-minified/widgets/tooltip/tooltip.js"></script>
+
+    <!-- Bootstrap Popover -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/popover/popover.css">
+    <script type="text/javascript" src="../assets-minified/widgets/popover/popover.js"></script>
+
+
+    <!-- Bootstrap Buttons -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/button/button.js"></script>
+
+    <!-- Bootstrap Collapse -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/collapse/collapse.js"></script>
+
+    <!-- Bootstrap Progress Bar -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/progressbar/progressbar.css">
+    <script type="text/javascript" src="../assets-minified/widgets/progressbar/progressbar.js"></script>
+
+    <!-- Uniform -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/uniform/uniform.css">
+    <script type="text/javascript" src="../assets-minified/widgets/uniform/uniform.js"></script>
+
+    <!-- Chosen -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/chosen/chosen.css">
+    <script type="text/javascript" src="../assets-minified/widgets/chosen/chosen.js"></script>
+
+    <!-- Superfish -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/superfish/superfish.js"></script>
+
+    <!-- Superclick -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/superclick/superclick.js"></script>
+
+    <!-- Nice scroll -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/nicescroll/nicescroll.js"></script>
+
+    <!-- Overlay -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/overlay/overlay.js"></script>
+
+    <!-- jQueryUI Autocomplete -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/autocomplete/autocomplete.js"></script>
+    <script type="text/javascript" src="../assets-minified/widgets/autocomplete/menu.js"></script>
+
+    <!-- Skycons -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/skycons/skycons.js"></script>
+
+    <!-- Content box -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/content-box/contentbox.js"></script>
+
+    <!-- Bootstrap Tabs -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/tabs/tabs.js"></script>
+
+    <!-- Sparklines charts -->
+
+    <script type="text/javascript" src="../assets-minified/widgets/charts/sparklines/sparklines.js"></script>
+    <script type="text/javascript" src="../assets-minified/widgets/charts/sparklines/sparklines-demo.js"></script>
+
+    <!-- Slidebars -->
+
+    <link rel="stylesheet" type="text/css" href="../assets-minified/widgets/slidebars/slidebars.css">
+    <script type="text/javascript" src="../assets-minified/widgets/slidebars/slidebars.js"></script>
+
+    <!-- Widgets init for demo -->
+
+    <script type="text/javascript" src="../assets-minified/widgets-init.js"></script>
+
+    <!-- Theme layout -->
+
+    <script type="text/javascript" src="../assets-minified/themes/supina/js/layout.js"></script>
+
+
+
+
+
+
+</body> 
+</html> 
