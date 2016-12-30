@@ -15,8 +15,8 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('key',50);
-            $table->integer('priority',50);
+            $table->string('key',250);
+            $table->integer('priority');
             $table->boolean('is_publish');
             $table->string('created_by',50);
             $table->string('updated_by',50);
